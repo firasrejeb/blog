@@ -1,0 +1,71 @@
+ table {
+     width: 100%;
+ }
+.wrap {
+    text-align: center;
+    height: 5em;
+}
+:host ::ng-deep .p-component {
+    font-size: 15px !important;
+}
+.features {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+}
+.expansion {
+    padding: 1em;
+}
+.actions {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+}
+.child {
+    box-shadow: 0px 2px 4px 2px rgba(125, 125, 125, 0.45);
+    -webkit-box-shadow: 0px 2px 4px 2px rgba(125, 125, 125, 0.45);
+    -moz-box-shadow: 0px 2px 4px 2px rgba(125, 125, 125, 0.45);
+    border: 1px solid rgba(125, 125, 125, 0.45);
+}
+.expandedRow {
+    background: #eaeaea !important;
+    box-shadow: 0px 2px 4px 2px rgba(125, 125, 125, 0.45);
+    -webkit-box-shadow: 0px 2px 4px 2px rgba(125, 125, 125, 0.45);
+    -moz-box-shadow: 0px 2px 4px 2px rgba(125, 125, 125, 0.45);
+    border: 1px solid rgba(125, 125, 125, 0.45);
+}
+:host ::ng-deep .mat-icon.mat-warn {
+    color: #e2443a;
+}
+#upV {
+    color: green;
+
+}
+#downV {
+    color: red;
+
+}
+.container {
+    padding-top: 50px;
+    padding-bottom: 10px;
+    color: #405065;
+}
+
+.search-blog {
+    max-width: 500px;
+    padding-bottom: 50px;
+    margin:auto;
+}
+
+.form-control {
+    box-shadow: 0px 40px 40px 0px #B0C1D9;
+
+}
+.form-control::placeholder  {
+    font-family: FontAwesome;
+}
+th, td {
+    text-align: left;
+    padding: 10px;
+}
+

@@ -1,0 +1,78 @@
+<div class="container text-center" >
+</div>
+<div  class="container">
+    <div class="row">
+        <div class="search-blog">
+            <input class="form-control" type="text" name="search" [(ngModel)]="searchText" autocomplete="off" placeholder="&#61442;  Start searching for a blog">
+        </div>
+        <table >
+            <thead>
+            <tr>
+                <th>Title</th>
+                <th>Author</th>
+                <th>Content</th>
+                <th>Vote</th>
+                <th>Action</th>
+
+            </tr>
+            </thead>
+            <tbody>
+            <tr *ngFor=" let blog of blogs | filter:searchText" >
+
+                            <td>{{ blog.title }}</td>
+                            <td>{{ blog.author}}</td>
+                            <td>{{ blog.content }}</td>
+                            <td class="votes">
+                                <button
+                                    *ngIf=" blog.vote >= '0' "
+                                    (click)="upvote(blog.id)"
+                                    mat-icon-button
+                                    type="button"
+                                >
+                                    <mat-icon
+                                       id="upV">thumb_up</mat-icon>
+                                </button>
+                                <button
+                                    *ngIf=" blog.vote < '0' "
+                                    (click)="upvote(blog.id)"
+                                    mat-icon-button
+                                    type="button"
+                                >
+                                    <mat-icon
+                                        >thumb_up</mat-icon>
+                                </button>
+                                <button
+                                    *ngIf=" blog.vote < '0' "
+                                    (click)="downvote(blog.id)"
+                                    mat-icon-button
+                                    type="button"
+                                >
+                                    <mat-icon
+                                        id="downV">thumb_down</mat-icon>
+                                </button>
+                                <button
+                                    *ngIf=" blog.vote >= '0' "
+                                    (click)="downvote(blog.id)"
+                                    mat-icon-button
+                                    type="button"
+                                >
+                                    <mat-icon
+                                        >thumb_down</mat-icon>
+                                </button>
+                                <div class="info">{{blog.vote}}</div>
+                            </td>
+                            <td class="actions">
+                                <button
+                                    [routerLink]="['/blogD/blogDetails/',blog.id]"
+                                    mat-icon-button
+                                    type="button"
+                                >
+                                    <mat-icon>forward</mat-icon>
+                                </button>
+
+                            </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

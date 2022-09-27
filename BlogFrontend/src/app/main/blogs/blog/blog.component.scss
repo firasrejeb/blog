@@ -1,0 +1,77 @@
+@import "src/@fuse/scss/fuse";
+@import "node_modules/angular-calendar/scss/angular-calendar";
+
+#calendar {
+    .header {
+        height: 200px;
+        min-height: 200px;
+        max-height: 200px;
+        position: relative;
+        background-size: 100% auto;
+        background-position: 0 15%;
+        background-repeat: no-repeat;
+        background-color: #fafafa;
+        color: #ffffff;
+        background-image: url("/assets/images/calendar/spring.jpg");
+
+        @include media-breakpoint(xs) {
+            height: 164px;
+            min-height: 164px;
+            max-height: 164px;
+        }
+
+        &:before {
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            z-index: 1;
+            background: rgba(0, 0, 0, 0.45);
+        }
+
+        .header-content {
+            height: 100%;
+
+            .header-top {
+                position: relative;
+                z-index: 2;
+
+                .logo {
+                    .logo-icon {
+                        margin-right: 16px;
+                    }
+
+                    .logo-text {
+                        font-size: 24px;
+                        text-shadow: 3px 4px 5px rgb(0 0 0 / 81%);
+                    }
+                }
+            }
+
+            .header-bottom {
+                position: relative;
+                z-index: 2;
+
+                .title {
+                    font-size: 20px;
+                    min-width: 160px;
+                    text-align: center;
+                    font-weight: 600;
+                }
+            }
+        }
+
+        .add-event-button {
+            position: absolute;
+            right: 18px;
+            bottom: -26px;
+            z-index: 10;
+        }
+    }
+
+    .content {
+        padding: 24px;
+    }
+}
